@@ -102,5 +102,18 @@ public class ListaCircular<T> {
         return this.tamanhoLista;
     }
 
+    @Override
+    public String toString() {
+        String strRetono = "";
 
+        No<T> noAuxiliar = this.cauda;
+        for (int i = 0; i < this.size(); i++) {
+            strRetono += "conteudo: " + noAuxiliar.getConteudo() + "--->";
+            noAuxiliar = noAuxiliar.getNoProximo();
+        }
+
+        strRetono += this.isEmpty() ? "": "(Retorna ao inicio)";
+
+        return strRetono;
+    }
 }
