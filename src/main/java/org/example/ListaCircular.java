@@ -23,6 +23,7 @@ public class ListaCircular<T> {
             }
             noAauxiliar.setNoProximo(noAauxiliar.getNoProximo().getNoProximo());
         }
+        this.tamanhoLista--;
 
     }
 
